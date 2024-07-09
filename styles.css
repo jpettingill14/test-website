@@ -1,0 +1,374 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px; /* Base font size */
+}
+
+/* Primary Navigation Styles */
+.primary-nav {
+    background-color: white; /* Change background to white */
+    color: #333; /* Change text color to dark gray */
+    padding: 0px 20px; /* Padding around the navigation bar */
+    position: relative;
+    z-index: 1000; /* Ensure nav is above other content */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+}
+
+.company-name {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    margin-left: 10px; /* Space between the logo and the company name */
+    color: #333; /* Change text color to dark gray */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #333; /* Change text color to dark gray */
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1em;
+    transition: color 0.3s ease; /* Add transition for hover effect */
+    position: relative; /* For positioning dropdown */
+    padding: 10px 0; /* Increase padding to match the height of the nav bar */
+}
+
+.nav-links a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+.nav-links .cta-button {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    color: white; /* Ensure button text is white */
+}
+
+.nav-links .cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 23px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align top of dropdown with bottom of nav bar */
+    left: 0;
+    background-color: white; /* Change background to white */
+    color: #333; /* Change text color to dark gray */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2000; /* Ensure dropdown is above other content */
+}
+
+.dropdown-content a {
+    color: #333; /* Change text color to dark gray */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    width: 100%; /* Ensure the link covers the full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5; /* Change background color on hover */
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+.hero {
+    position: relative; /* Ensure overlay is positioned correctly */
+    background-image: url('images/bookshelf.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0; /* Add some padding to the hero section */
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Ensure the pseudo-element is contained */
+    z-index: 1; /* Ensure hero has a lower z-index */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure overlay is behind other content */
+}
+
+.hero-content {
+    position: relative; /* Ensure the content is above the overlay */
+    z-index: 2;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px; /* Define the space between grid items */
+}
+
+.hero-text h1 {
+    font-family: 'Borel';
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero-text p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.genres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.genre {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make anchor tag block-level */
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+.genre:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.genre h2 {
+    font-family: 'Merriweather', serif;
+    margin-top: 0;
+    font-size: 1.5em; /* 1.5 * 16px = 24px */
+}
+
+.genre p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em; /* 1em = 16px */
+}
+
+/* ================================
+   Wrapper and General Section Styles
+   ================================ */
+
+/* ================================
+   Wrapper and General Section Styles
+   ================================ */
+
+   .features-wrapper {
+    padding: 40px 140px; /* Padding around the wrapper, with extra left and right padding */
+    background-color: white; /* Background color for the wrapper */
+}
+
+.feature-section {
+    background-color: white; /* Background color set to white */
+    padding: 40px 20px; /* Top, bottom, left, and right padding */
+    width: 100%; /* Set width to 100% */
+    position: relative; /* Ensure the section is a positioned element */
+    margin-bottom: 40px; /* Add space between sections */
+    display: flex; /* Use flex to align the container */
+    flex-direction: column; /* Stack the header above the container */
+}
+
+/* ================================
+   Feature Section Headers
+   ================================ */
+
+.feature-section h2 {
+    color: black; /* Set header text color to black */
+    margin-bottom: -12px; /* Space below the header */
+    font-family: 'Borel', cursive;
+    font-size: 2em; /* 1.5 * 16px = 24px */
+}
+
+/* Indentation for headers */
+.left-align h2 {
+    padding-left: 320px; /* Indent to the right for left-aligned section */
+}
+
+.right-align h2 {
+    padding-right: 340px; /* Indent to the left for right-aligned section */
+    text-align: right; /* Align text to the right */
+}
+
+/* ================================
+   Alignment Classes
+   ================================ */
+
+.left-align {
+    align-items: flex-start; /* Align to the left */
+}
+
+.right-align {
+    align-items: flex-end; /* Align to the right */
+}
+
+/* ================================
+   Feature Containers
+   ================================ */
+
+.left-feature-container,
+.right-feature-container {
+    display: grid;
+    gap: 20px;
+    max-width: 800px; /* Reduce the width of the container */
+    width: 100%;
+    height: 250px;
+    position: relative; /* Ensure the container is a positioned element */
+    padding: 20px; /* Add some padding inside the container */
+    border-radius: 8px; /* Optional: Add rounded corners to the container */
+}
+
+.left-feature-container {
+    grid-template-columns: 1.6fr 2.5fr; /* 1.6fr for image, 2.5fr for content */
+}
+
+.right-feature-container {
+    grid-template-columns: 2.5fr 1.6fr; /* 2.5fr for content, 1.6fr for image */
+}
+
+/* ================================
+   Feature Containers Colors
+   ================================ */
+
+.feature-blue .left-feature-container,
+.feature-blue .right-feature-container {
+    background-color: #4285f4; /* Blue background color */
+}
+
+.feature-orange .left-feature-container,
+.feature-orange .right-feature-container {
+    background-color: #ffa500; /* Orange background color */
+}
+
+.feature-green .left-feature-container,
+.feature-green .right-feature-container {
+    background-color: #4caf50; /* Green background color */
+}
+
+/* ================================
+   Feature Images
+   ================================ */
+
+.feature-image {
+    position: absolute; /* Position the image absolutely */
+    top: -50px; /* Adjust the value to position the image higher */
+    width: 33.33%; /* Adjust width as needed */
+}
+
+.feature-image img {
+    width: 100%;
+    height: 320px; /* Set fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.left-align .feature-image {
+    left: 20px; /* Indent the image to the right by 20px for left aligned section */
+}
+
+.right-align .feature-image {
+    right: 20px; /* Indent the image to the left by 20px for right aligned section */
+    grid-column: 2; /* Move the image to the second column */
+    width: 90%; /* Ensure the image fills the column */
+}
+
+/* ================================
+   Feature Content
+   ================================ */
+
+.feature-content {
+    color: white;
+    grid-column: 2; /* Ensure content stays in the second column */
+}
+
+.feature-content h3 {
+    font-size: 1.5em;
+    margin: 20px 0 5px 0; /* Add bottom margin for space between h3 and p */
+}
+
+.feature-content p {
+    margin: 5px 0 30px; /* Add bottom margin to create space between paragraphs */
+}
+
+.right-align .feature-content {
+    grid-column: 1; /* Ensure content stays in the first column for right aligned section */
+    text-align: left; /* Align text to the left */
+    margin: 0px 0 0px 40px;
+}
+
+.discussion-board {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.discussion-board h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2em; /* 2 * 16px = 32px */
+}
+
+.discussion-board p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em; /* 1.2 * 16px = 19.2px */
+}
+
+.discussion-board .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #4CAF50;
+    background-color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* 1.2 * 16px = 19.2px */
+}
+
+.discussion-board .cta:hover {
+    background-color: #ddd;
+}
