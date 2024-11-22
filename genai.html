@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI</title>
+    <link rel="stylesheet" href="genaistyles.css">
+</head>
+<body>
+    <h1>GenAI Personalization</h1>
+    <h2>Visitor profile:</h2>
+    <form id="genai-form">
+        <label for="industry">Industry:</label>
+        <select id="industry" required>
+            <option value="">Select an industry</option>
+            <option value="Automotive">Automotive</option>
+            <option value="Banking">Banking</option>
+            <option value="Construction">Construction</option>
+            <option value="Education">Education</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Food and Beverage">Food and Beverage</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Media and Entertainment">Media and Entertainment</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Retail">Retail</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Travel and Tourism">Travel and Tourism</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <label for="company-size">Company Size:</label>
+        <select id="company-size" required>
+            <option value="">Select your company size</option>
+            <option value="1">1</option>
+            <option value="2-50">2-50</option>
+            <option value="51-200">51-200</option>
+            <option value="201-500">201-500</option>
+            <option value="501-1,000">501-1,000</option>
+            <option value="1,001-5,000">1,001-5,000</option>
+            <option value="5,001-10,000">5,001-10,000</option>
+            <option value="10,000+">10,000+</option>
+        </select>
+        <br>
+        <label for="product-interest">Product of Interest:</label>
+        <select id="product-interest" required>
+            <option value="">Select a product of interest</option>
+            <option value="hiring">Hiring</option>
+            <option value="advertising">Advertising</option>
+            <option value="selling">Selling</option>
+            <option value="learning">Learning</option>
+        </select>
+        <br>
+        <button type="submit">Generate Message</button>
+    </form>
+
+    <h2>Generated Output:</h2>
+    <div id="result" style="padding: 10px; border: 1px solid #ddd; margin-top: 10px; font-family: Arial, sans-serif;"></div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <h1 id="hero-headline">Your Headline Here</h1>
+            <button id="hero-cta">Call to Action</button>
+        </div>
+        <div class="hero-right">
+            <img src="/images/smallbiz.jpg" alt="Hero Image">
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="genai.js"></script>
+</body>
+</html>
