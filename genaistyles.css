@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+.hero-left, .hero-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-right img {
+    width: 100%;
+    height: auto;
+}
+
+#hero-headline {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00796b; /* Dark teal color */
+}
+
+#hero-cta {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #00796b; /* Dark teal color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hero-cta:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
